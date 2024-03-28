@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMELANDSCAPE</title>
+    <!-- Link To Css-->
+    <link rel="stylesheet" href="C:\Users\samue\OneDrive\Desktop\homelamdscape\styles.css">
+    <!-- Boxicons-->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <div class="nav container">
+            <!--logo-->
+            <a href="homescape.html" class="logo"><i class='bx bxs-home'></i>HOMELANDSCAPE</a>
+             
+            <!--Login button-->
+            <a href="signup.html" class="btn">Sign Up</a>
+        </div>
+    </header>
+    <!--login-->
+    <div class="login container">
+        <div class="login-container">
+            <h2>Login to continue</h2>
+            <p>login with yoy data taht you entered<br>during your registration</p>
+            <!--login form-->
+            <form id="loginform" >
+                <span>enter your email address</span>
+                <input type="email" name="" id="email" placeholder="yourmail@gmail.com" required>
+                <span>Enter your password</span>
+                <input type="password" name="" id="password" placeholder="password" required>
+                <input type="submit" value="Log In" class="button">
+                <a href="#">Forgot password ?</a>
+
+            </form>
+            <a href="signup.html" class="btn">Sign up now</a>
+            <div id="error message" class="error"></div>
+        </div>
+        <!--Log in Image-->
+        <div class="login-image">
+            <img src="welcome.jpg" alt=""> 
+        </div>
+        
+    </div>
+    
+    <!--Footer-->
+    <section class="footer">
+        <div class="footer-container container">
+            <h2>HOMELANDSCAPE</h2>
+            <div class="footer-box">
+                <h3>Quick links</h3>
+                <a href="#">Agency</a>
+                <a href="#">Building</a>
+                <a href="#">Rates</a>
+            </div>
+            <div class="footer-box">
+                <h3>Locations</h3>
+                <a href="#">Nigeria</a>
+                <a href="#">United States of America</a>
+                <a href="#">South Africa</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <a href="#">+2349016853810</a>
+                <a href="#">+1(678)799-4272</a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Copyright-->
+    <div class="copyright">
+        <p>&#169; Homelandscape All Right Reserved</p>
+    </div>
+
+    <script>
+        document.getElementById('loginform').addEventListener('submit', function(event){
+            event.preventDefault();
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (email == 'sammy@gmail.com' && password == '12345678' ){
+                window.location.href = 'home.html';
+            } else{
+                document.getElementById('error message').innerText = 'invalid username or password';
+            }
+        })
+        
+
+    </script>
+
+
+ 
+
+
+</body>
+</html>
